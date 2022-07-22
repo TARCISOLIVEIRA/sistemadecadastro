@@ -5,6 +5,8 @@
  */
 package Visao;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author POSITIVO
@@ -32,8 +34,9 @@ public class FormePrincipal extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         menuCidade = new javax.swing.JMenuItem();
         menuAjuda = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("CADASTRO DE PESSOAS ");
 
         menuCadastro.setText("Cadastro");
@@ -47,6 +50,15 @@ public class FormePrincipal extends javax.swing.JFrame {
         barraMenu.add(menuCadastro);
 
         menuAjuda.setText("Ajuda");
+
+        jMenuItem2.setText("Sobre");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        menuAjuda.add(jMenuItem2);
+
         barraMenu.add(menuAjuda);
 
         setJMenuBar(barraMenu);
@@ -63,7 +75,12 @@ public class FormePrincipal extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+      JOptionPane.showMessageDialog(null,"Sistema de Cadastro...\nDireitos Reservados");
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -103,6 +120,7 @@ public class FormePrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar barraMenu;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenu menuAjuda;
     private javax.swing.JMenu menuCadastro;
     private javax.swing.JMenuItem menuCidade;
