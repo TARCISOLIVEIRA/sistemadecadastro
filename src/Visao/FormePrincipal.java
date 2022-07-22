@@ -5,6 +5,7 @@
  */
 package Visao;
 
+import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 
 /**
@@ -40,11 +41,21 @@ public class FormePrincipal extends javax.swing.JFrame {
         setTitle("CADASTRO DE PESSOAS ");
 
         menuCadastro.setText("Cadastro");
+        menuCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuCadastroActionPerformed(evt);
+            }
+        });
 
         jMenuItem1.setText("Pessoas");
         menuCadastro.add(jMenuItem1);
 
         menuCidade.setText("Cidades");
+        menuCidade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuCidadeActionPerformed(evt);
+            }
+        });
         menuCadastro.add(menuCidade);
 
         barraMenu.add(menuCadastro);
@@ -81,6 +92,21 @@ public class FormePrincipal extends javax.swing.JFrame {
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
       JOptionPane.showMessageDialog(null,"Sistema de Cadastro...\nDireitos Reservados");
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void menuCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastroActionPerformed
+       
+        
+    }//GEN-LAST:event_menuCadastroActionPerformed
+
+    private void menuCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCidadeActionPerformed
+        formCidade form = new formCidade();
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setTitle("manutencao da Cidade");
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
+        
+    }//GEN-LAST:event_menuCidadeActionPerformed
 
     /**
      * @param args the command line arguments
